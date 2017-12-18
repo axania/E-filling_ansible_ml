@@ -1,0 +1,5 @@
+---
+
+vault_ansible_ssh_user: efi
+vault_ansible_ssh_pass: Efiling4
+vault_dd_key: "f2e9e8821061d7b27440b39b42c1e102"

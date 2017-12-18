@@ -1,0 +1,69 @@
+---
+
+dd_enabled: no
+dd_installed: True
+
+docker_compose_version: 1.15.0
+docker_ce_version: 17.09.0~ce-0~ubuntu
+
+timezone: Africa/Timbuktu
+
+dns_resolv_searchpath:
+  - 'dgimali.org'
+
+dns_server_list:
+  - 10.30.1.4
+
+docker_user: "{{ vault_docker_user }}"
+docker_pwd: "{{ vault_docker_pwd }}"
+
+pull_images: no
+
+efiling_ui_image_version: 1.3.0
+efiling_api_image_version: 1.3.0
+dss_sigtas_api_image_version: '0.5.1'
+
+port: 8080
+node_env: production
+debug: 'true'
+logging_level: info
+
+es_fluentd_enabled: False #elastic search with fluentd
+is_datadog_on_docker: True
+is_tax_calculator_enabled: False
+is_mongo_on_docker_enabled: False 
+node_installed: False
+jenkins_slave_node: False
+
+public_ui_url: http://tr-efi-worker01.dgimali.org:4200/
+admin_ui_url: http://tr-efi-worker01.dgimali.org:4202/
+
+sigtas_api_url: 'http://tr-efi-worker02.az.sogema.local:9767/'
+sigtas_api_services_path: 'services/sigtas/'
+sigtas_api_auth_path: 'token/'
+sigtas_api_secured: false
+sigtas_api_key: "{{ vault_sigtas_api_key }}"
+sigtas_api_secret :  "{{ vault_sigtas_api_secret }}"
+
+calculation_api_url: http://{{ansible_ssh_host}}:8082/
+calculation_api_services_path: api/
+calculation_api_secured: 'false'
+
+cache_url: localhost:6379
+
+database_url: "tr-efi-mdb01.dgimali.org:27017"
+cache_timer_short_hr: 1
+cache_timer_medium_hr: 24
+cache_timer_long_hr: 100
+
+db_user: "{{ vault_db_user }}"
+db_pass: "{{ vault_db_pass }}"
+db_name: efiling
+
+seed_admin_username: "{{ vault_seed_admin_username }}"
+seed_admin_password: "{{ vault_seed_admin_password }}"
+seed_admin_email: efi4MaliAdmin@sogematech.com
+
+seed_tax_system_username: "{{ vault_seed_tax_system_username }}"
+seed_tax_system_password: "{{ vault_seed_tax_system_password }}"
+seed_tax_system_email: efi4MaliTaxSystem@sogematech.com

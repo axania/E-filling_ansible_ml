@@ -1,0 +1,19 @@
+---
+
+vault_docker_user: jenkins_ef4
+vault_docker_pwd: ef4jenkins
+
+vault_db_user: efiling_api
+vault_db_pass: 4c7xG2V
+
+vault_seed_admin_username: admin
+vault_seed_admin_password: VyswKrF5s8Z35vvy
+
+vault_seed_tax_system_username: taxSystem
+vault_seed_tax_system_password: wvf5BCB3wX4s8RkN
+
+vault_sigtas_api_key: '4fl8vo5cseqhbqsdustqsfwtfeia'
+vault_sigtas_api_secret :  '4wsbw8enp_2arwjja_jm5xl0m54a'
+
+vault_oracle_user: sigtas_api
+vault_oracle_pwd: dbaadmin

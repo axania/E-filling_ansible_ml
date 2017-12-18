@@ -1,0 +1,18 @@
+---
+
+full_hostname: uat-ml-efi-worker01.az.sogema.local
+
+is_dss_present: True
+
+available_docker_services:
+  - efiling_ui 
+  - efiling_ui_admin
+  - efiling_api 
+  - efiling_cache
+  - datadog
+  
+datadog_monitored_docker_services: 
+  - efiling_ui 
+  - efiling_ui_admin
+  - efiling_api 
+  - efiling_cache

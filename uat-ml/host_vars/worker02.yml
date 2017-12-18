@@ -1,0 +1,16 @@
+---
+
+full_hostname: uat-ml-efi-worker02.az.sogema.local
+
+available_docker_services:
+  - postgres
+  - dss
+  - datadog
+
+datadog_monitored_docker_services: 
+  - dss
+  - postgres 
+
+first_install: True
+is_dss_present: True
+is_flyway_installed: True
