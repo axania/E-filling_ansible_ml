@@ -13,15 +13,16 @@ dns_resolv_searchpath:
 
 dns_server_list:
   - 10.30.1.4
+  - 8.8.8.8
 
 docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
 
 pull_images: no
 
-efiling_ui_image_version: 1.3.0
-efiling_api_image_version: 1.3.0
-dss_sigtas_api_image_version: '0.5.1'
+efiling_ui_image_version: 1.5.0
+efiling_api_image_version: 1.5.0 
+dss_sigtas_api_image_version: '0.7.0'
 
 port: 8080
 node_env: production
@@ -35,10 +36,10 @@ is_mongo_on_docker_enabled: False
 node_installed: False
 jenkins_slave_node: False
 
-public_ui_url: http://tr-efi-worker01.dgimali.org:4200/
-admin_ui_url: http://tr-efi-worker01.dgimali.org:4202/
+public_ui_url: http://tr-efi-worker02.dgimali.org:4200/
+admin_ui_url: http://tr-efi-worker02.dgimali.org:4202/
 
-sigtas_api_url: 'http://tr-efi-worker02.az.sogema.local:9767/'
+sigtas_api_url: 'http://10.30.1.107:9767/'
 sigtas_api_services_path: 'services/sigtas/'
 sigtas_api_auth_path: 'token/'
 sigtas_api_secured: false
@@ -67,3 +68,19 @@ seed_admin_email: efi4MaliAdmin@sogematech.com
 seed_tax_system_username: "{{ vault_seed_tax_system_username }}"
 seed_tax_system_password: "{{ vault_seed_tax_system_password }}"
 seed_tax_system_email: efi4MaliTaxSystem@sogematech.com
+
+
+#Flyway WSO2 Postgres variables
+java_oracle_prefix: jdk
+flyway_root: /opt/flyway
+flyway_config:
+ database: 
+   host: localhost
+   port: 5432
+   dbms: postgresql
+   name: wso2dss
+   user: postgres
+   password: postgres
+ schemas: public
+flyway_locations: filesystem:/opt/migrations/    
+

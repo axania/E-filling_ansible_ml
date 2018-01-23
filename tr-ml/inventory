@@ -1,14 +1,7 @@
-# This is a prepod env for Mali
-worker01 ansible_ssh_host=10.30.1.105
-worker02 ansible_ssh_host=10.30.1.104
+# This is the training env for Mali
+worker01 ansible_ssh_host=10.30.1.104
+worker02 ansible_ssh_host=10.30.1.107
 mongo01 ansible_ssh_host=10.30.1.103
-#lb01 ansible_ssh_host=tr-efi-lb01
-#worker02 ansible_ssh_host=tr-efi-worker02
-#mongo01 ansible_ssh_host=tr-efi-mdb01
-#lb01 ansible_ssh_host=tr-efi-lb01
-
-#[haproxy]
-#lb01
 
 [mongo]
 mongo01
@@ -20,7 +13,6 @@ worker02
 [datacenter:children]
 docker
 mongo
-#haproxy
 
 [datacenter:vars]
 ansible_ssh_user={{vault_ansible_ssh_user}}

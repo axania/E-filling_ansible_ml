@@ -2,10 +2,10 @@
 
 full_hostname: tr-efi-worker01
 
-is_dss_present: True
+is_dss_present: False
 
 available_docker_services:
-  - efiling_ui 
+  - efiling_ui
   - efiling_ui_admin
   - efiling_api 
   - efiling_cache
