@@ -36,6 +36,9 @@ is_mongo_on_docker_enabled: False
 node_installed: False
 jenkins_slave_node: False
 
+is_dss_present: True # DSS not being installed in the Same cluster per default
+is_flyway_installed: True
+
 public_ui_url: http://tr-efi-worker02.dgimali.org:4200/
 admin_ui_url: http://tr-efi-worker02.dgimali.org:4202/
 
@@ -69,6 +72,11 @@ seed_tax_system_username: "{{ vault_seed_tax_system_username }}"
 seed_tax_system_password: "{{ vault_seed_tax_system_password }}"
 seed_tax_system_email: efi4MaliTaxSystem@sogematech.com
 
+oracle_host: vm-bd-dgi-03
+oracle_port: 1521
+oracle_user: sigtas_api
+oracle_pwd: dbaadmin
+oracle_db: sgt30uat
 
 #Flyway WSO2 Postgres variables
 java_oracle_prefix: jdk
