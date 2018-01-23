@@ -72,11 +72,11 @@ seed_tax_system_username: "{{ vault_seed_tax_system_username }}"
 seed_tax_system_password: "{{ vault_seed_tax_system_password }}"
 seed_tax_system_email: efi4MaliTaxSystem@sogematech.com
 
-oracle_host: vm-bd-dgi-03
+oracle_host: vm-bd-dgi-01
 oracle_port: 1521
 oracle_user: sigtas_api
 oracle_pwd: dbaadmin
-oracle_db: sgt30uat
+oracle_db: sgt30for
 
 #Flyway WSO2 Postgres variables
 java_oracle_prefix: jdk
@@ -90,5 +90,4 @@ flyway_config:
    user: postgres
    password: postgres
  schemas: public
-flyway_locations: filesystem:/opt/migrations/    
-
+flyway_locations: filesystem:/opt/migrations/
