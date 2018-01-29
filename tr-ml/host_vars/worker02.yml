@@ -1,6 +1,6 @@
 ---
 
-full_hostname: tr-efi-worker02
+full_hostname: tr-efi-worker02.dgimali.org
 
 available_docker_services:
   - postgres

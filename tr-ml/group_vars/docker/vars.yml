@@ -20,9 +20,9 @@ docker_pwd: "{{ vault_docker_pwd }}"
 
 pull_images: no
 
-efiling_ui_image_version: 1.5.0
-efiling_api_image_version: 1.5.0 
-dss_sigtas_api_image_version: '0.7.0'
+efiling_ui_image_version: 1.6.6
+efiling_api_image_version: 1.6.6
+dss_sigtas_api_image_version: 0.7.7
 
 port: 8080
 node_env: production

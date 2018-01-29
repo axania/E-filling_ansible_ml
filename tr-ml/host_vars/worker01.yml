@@ -1,6 +1,6 @@
 ---
 
-full_hostname: tr-efi-worker01
+full_hostname: tr-efi-worker01.dgimali.org
 
 is_dss_present: False
 
