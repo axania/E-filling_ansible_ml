@@ -12,7 +12,7 @@ dns_resolv_searchpath:
   - 'dgimali.org'
 
 dns_server_list:
-  - 10.30.1.4
+  - 10.30.1.48
   - 8.8.8.8
 
 docker_user: "{{ vault_docker_user }}"
@@ -39,10 +39,10 @@ jenkins_slave_node: False
 is_dss_present: True # DSS not being installed in the Same cluster per default
 is_flyway_installed: True
 
-public_ui_url: http://tr-efi-worker02.dgimali.org:4200/
-admin_ui_url: http://tr-efi-worker02.dgimali.org:4202/
+public_ui_url: http://vm-ap-dgi-20.dgimali.org:4200/
+admin_ui_url: http://vm-ap-dgi-20.dgimali.org:4202/
 
-sigtas_api_url: 'http://10.30.1.107:9767/'
+sigtas_api_url: 'http://vm-ap-dgi-20.dgimali.org:9767/'
 sigtas_api_services_path: 'services/sigtas/'
 sigtas_api_auth_path: 'token/'
 sigtas_api_secured: false
@@ -55,7 +55,7 @@ calculation_api_secured: 'false'
 
 cache_url: localhost:6379
 
-database_url: "tr-efi-mdb01.dgimali.org:27017"
+database_url: "vm-bd-dgi-10.dgimali.org:27017"
 cache_timer_short_hr: 1
 cache_timer_medium_hr: 24
 cache_timer_long_hr: 100

@@ -1,8 +1,10 @@
 ---
 
-full_hostname: tr-efi-worker01.dgimali.org
+full_hostname: vm-ap-dgi-20.dgimali.org
 
-is_dss_present: False
+first_install: True
+is_dss_present: True
+is_flyway_installed: True
 
 available_docker_services:
   - efiling_ui
@@ -10,9 +12,14 @@ available_docker_services:
   - efiling_api 
   - efiling_cache
   - datadog
-  
+  - postgres
+  - dss
+
 datadog_monitored_docker_services: 
   - efiling_ui 
   - efiling_ui_admin
   - efiling_api 
   - efiling_cache
+  - dss
+  - postgres
+

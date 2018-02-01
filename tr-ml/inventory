@@ -1,14 +1,12 @@
 # This is the training env for Mali
-worker01 ansible_ssh_host=10.30.1.104
-worker02 ansible_ssh_host=10.30.1.107
-mongo01 ansible_ssh_host=10.30.1.103
+worker01 ansible_ssh_host=10.30.252.140
+mongo01 ansible_ssh_host=10.30.252.141
 
 [mongo]
 mongo01
 
 [docker]
 worker01
-worker02
 
 [datacenter:children]
 docker
