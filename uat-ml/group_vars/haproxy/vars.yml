@@ -1,0 +1,12 @@
+---
+
+timezone: Africa/Timbuktu
+
+efiling_domain: dgimali.org
+
+dns_resolv_searchpath:
+  - 'dgimali.org'
+
+dns_server_list:
+  - 10.30.1.48
+  - 8.8.8.8

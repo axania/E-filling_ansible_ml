@@ -1,0 +1,47 @@
+---
+
+vault_mongodb_user_admin_name: "admin"
+vault_mongodb_user_admin_password: "mUpVkfja9u"
+
+vault_mongodb_root_admin_name: "siteRootAdmin"
+vault_mongodb_root_admin_password: "LMhFXu6Kefg6gWA"
+
+vault_mongodb_root_backup_name: "backupAdmin"
+vault_mongodb_root_backup_password: "bhKoVJhV7FTJw8K"
+
+vault_mongodb_security_authorization: 'enabled'
+#mongodb_keyfile_content: "{{ vault_mongodb_keyfile_content }}"
+
+vault_efiling_user:
+  - {
+      name: efiling_api,
+      password: eRcC6YXcnW6ZDy,
+      roles: dbOwner,
+      database: efiling
+    }
+  - {
+      name: efiling_api,
+      password: eRcC6YXcnW6ZDy,
+      roles: root,
+      database: admin
+    }
+
+vault_mongodb_keyfile_content: |
+  MxT8FHPajFtIgp9dELwQv0IaRA8x231wRHjSWrCeenpFgkWDWm6gE9/qywYCQ6Hb
+  DEv6xS1vGOd2FU0hmx2lrvrEWL/lmnGzlLWvpW3goieTPcIaGMD+Zbd6RhAFe/Dn
+  RpTKlRSy/HJIzcOcqcVsob6NENSQ4ljcZkGDdpR2WEPYxa4uyq2RF6ZWe2d87J+/
+  8myapWYQUux/ed2EIMgpZ2IelbDv0ChNimgKCcvwqfZcM+MIqllIQYW4veEAOAbi
+  VA8e6Oar22SrxJJjbu0BaBmrKzQvClEhv/ur0B+mvPdirhHxfi9hjxj3atZbE/Ac
+  06McHnxZM4iJRXgD0Da/lzUfUmb2aaU1vqKuNRpcl5XPemW+K77zB+EMZ84GFbak
+  yPQGwjKOVCeL5fEbD5aOBgojNasawuoLTlz67A4azQ7fkq4ZYO91h8OfFzNKy2K1
+  nxqpKSFJ+uihPNSdQEnD0rDLlOCpwkFa/wgLuhdlBx0ju0fu/MtdaGs4A4f0PRoZ
+  +RsWOYRx1ET3l1xbw+idA/jYqIiiRBvVGeW+EmRLiutQmlKJenwjzjhmvhg5yDPk
+  ix0hAkAsjMU0RfmKY17mVJTZJnuLnBElKuFWWmiGqfstwT73UuqfiZZYuhx9IdZe
+  biAnrpr1unC6opGIt8TWMoi+cZBas0HuQKnyxSJp6bm+xZTqyKiIv2Ra9hir2YMh
+  zn+iLYBj1EXGEZqcRVwOOwxfl2lNwn7p0iMS8YaJrz4gVaV+iJIJecsxEjHqQ/dr
+  m3yifu6rW7dppvhgrTv4PXKrCQP1qzggz2LuGY8U0IKFGujvNkMWtMifyv9409No
+  ks+zYOleJBDkWmtpGjF0Je0oWOBWKpsGOC14EV2/NFFbGXrqozr+4y6DFhSg+WM7
+  K6IxMmV66aibe7MTpv0C6IdUy4gPfUhovK7WAtI2N1TN4GEZG7LO3az8QzONB3Km
+  GPtg5scANremRab3T9eeaQcDl9tb
+
+  

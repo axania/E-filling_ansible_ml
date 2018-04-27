@@ -1,0 +1,34 @@
+# This is the production environment for Mali
+# Please note that the load balancer is deployed by the client
+
+worker01 ansible_ssh_host=vm-ap-dgi-22.dgimali.org
+worker02 ansible_ssh_host=vm-ap-dgi-23.dgimali.org
+worker03 ansible_ssh_host=vm-ap-dgi-24.dgimali.org
+
+mongo01 ansible_ssh_host=vm-bd-dgi-12.dgimali.org
+mongo02 ansible_ssh_host=vm-bd-dgi-13.dgimali.org
+mongo03 ansible_ssh_host=vm-bd-dgi-14.dgimali.org
+
+[mongo_master]
+mongo01 mongodb_master=True
+
+[mongo_replicas]
+mongo02
+mongo03
+
+[mongo:children]
+mongo_master
+mongo_replicas
+
+[docker]
+worker01
+worker02
+worker03
+
+[datacenter:children]
+docker
+mongo
+
+[datacenter:vars]
+ansible_ssh_user={{vault_ansible_ssh_user}}
+ansible_ssh_pass={{vault_ansible_ssh_pass}}

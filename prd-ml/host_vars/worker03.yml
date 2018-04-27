@@ -1,0 +1,18 @@
+---
+
+full_hostname: vm-ap-dgi-24.dgimali.org
+
+is_tax_calculator_enabled: True
+
+available_docker_services:
+  - efiling_ui 
+  - efiling_ui_admin
+  - efiling_api 
+  - efiling_cache
+  - datadog
+  
+datadog_monitored_docker_services: 
+  - efiling_ui 
+  - efiling_ui_admin
+  - efiling_api 
+  - efiling_cache

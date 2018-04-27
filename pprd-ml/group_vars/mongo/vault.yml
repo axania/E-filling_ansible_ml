@@ -1,13 +1,13 @@
 ---
 
 vault_mongodb_user_admin_name: "admin"
-vault_mongodb_user_admin_password: "xTkkPs5g"
+vault_mongodb_user_admin_password: "mUpVkfja9u"
 
 vault_mongodb_root_admin_name: "siteRootAdmin"
-vault_mongodb_root_admin_password: "HXp274yuT8YB"
+vault_mongodb_root_admin_password: "LMhFXu6Kefg6gWA"
 
 vault_mongodb_root_backup_name: "backupAdmin"
-vault_mongodb_root_backup_password: "nf7FXm5xwnT8"
+vault_mongodb_root_backup_password: "bhKoVJhV7FTJw8K"
 
 vault_mongodb_security_authorization: 'enabled'
 #mongodb_keyfile_content: "{{ vault_mongodb_keyfile_content }}"
@@ -15,13 +15,13 @@ vault_mongodb_security_authorization: 'enabled'
 vault_efiling_user:
   - {
       name: efiling_api,
-      password: 4c7xG2V,
+      password: eRcC6YXcnW6ZDy,
       roles: dbOwner,
       database: efiling
     }
   - {
       name: efiling_api,
-      password: 4c7xG2V,
+      password: eRcC6YXcnW6ZDy,
       roles: root,
       database: admin
     }

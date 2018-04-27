@@ -1,16 +1,16 @@
 ---
 
-full_hostname: pp-ml-efi-worker02.az.sogema.local
+full_hostname: vm-ap-dgi-23.dgimali.org
 
 available_docker_services:
-  - postgres
   - dss
+  - postgres
   - datadog
 
 datadog_monitored_docker_services: 
   - dss
-  - postgres 
+  - postgres
 
 first_install: True
 is_dss_present: True
-is_flyway_installed: True
+is_flyway_installed: True  

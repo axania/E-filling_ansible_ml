@@ -1,11 +1,23 @@
 ---
 timezone: Africa/Timbuktu
 
+dns_resolv_searchpath:
+  - 'dgimali.org'
+
+dns_server_list:
+  - 10.30.1.48
+  - 8.8.8.8
+
 dd_enabled: yes
 dd_installed: True
 
 mongodb_package: mongodb-org
 mongodb_version: "3.4"
+
+mongodb_apt_keyserver: "hkp://keyserver.ubuntu.com:80"
+
+mongodb_apt_key_id:
+  "3.4": "2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5"
 
 mongodb_user_update_password: "on_create" # MongoDB user password update default policy
 mongodb_manage_service: true
@@ -34,6 +46,16 @@ mongodb_net_port: 27017
 
 mongodb_daemon_name: "{{ 'mongod' if ('mongodb-org' in mongodb_package) else 'mongodb' }}"
 mongodb_storage_engine: 'wiredTiger'
+
+#Replication
+mongodb_replication_replset: efi4ReplSet
+mongodb_replication_oplogsize: 1024
+
+# mongodb_replication_params should be configured on each replica set node
+mongodb_replication_params:
+  - { host_name: "vm-bd-dgi-12.dgimali.org", host_port: "{{ mongodb_net_port }}", host_type: 'replica' }
+  - { host_name: "vm-bd-dgi-13.dgimali.org", host_port: "{{ mongodb_net_port }}", host_type: 'replica' }
+  - { host_name: "vm-bd-dgi-14.dgimali.org", host_port: "{{ mongodb_net_port }}", host_type: 'replica' }
 
 ## systemLog Options
 ## The destination to which MongoDB sends all log output. Specify either 'file' or 'syslog'.

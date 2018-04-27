@@ -1,8 +1,8 @@
 ---
 
-full_hostname: pp-ml-efi-worker01.az.sogema.local
+full_hostname: vm-ap-dgi-22.dgimali.org
 
-is_dss_present: True
+is_tax_calculator_enabled: True
 
 available_docker_services:
   - efiling_ui 
