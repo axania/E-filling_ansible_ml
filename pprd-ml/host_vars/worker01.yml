@@ -2,7 +2,7 @@
 
 full_hostname: vm-ap-dgi-21.dgimali.org
 
-is_dss_present: True
+is_dss_present: False
 
 available_docker_services:
   - efiling_ui 
@@ -10,7 +10,7 @@ available_docker_services:
   - efiling_api 
   - efiling_cache
   - datadog
-  
+
 datadog_monitored_docker_services: 
   - efiling_ui 
   - efiling_ui_admin

@@ -6,7 +6,7 @@ dd_installed: True
 docker_compose_version: 1.15.0
 docker_ce_version: 17.09.0~ce-0~ubuntu
 
-timezone: Africa/Timbuktu
+timezone: Africa/Bamako
 
 dns_resolv_searchpath:
   - 'dgimali.org'
@@ -36,10 +36,10 @@ is_mongo_on_docker_enabled: False
 node_installed: False
 jenkins_slave_node: False
 
-public_ui_url: http://vm-lb-dgi-03.dgimali.org:4200/
-admin_ui_url: http://vm-lb-dgi-03.dgimali.org:4202/
+public_ui_url: https://e-impot-prp.dgi.gouv.ml:443/
+admin_ui_url: https://e-impot-prp.dgi.gouv.ml:4203/
 
-sigtas_api_url: 'http://vm-ap-dgi-21.dgimali.org:9767/'
+sigtas_api_url: 'http://vm-ap-dgi-27.dgimali.org:9767/'
 sigtas_api_services_path: 'services/sigtas/'
 sigtas_api_auth_path: 'token/'
 sigtas_api_secured: false
@@ -52,7 +52,7 @@ calculation_api_secured: 'false'
 
 cache_url: localhost:6379
 
-database_url: "vm-bd-dgi-11.dgimali.org:27017"
+database_url: "vm-bd-dgi-11.dgimali.org:27017,vm-bd-dgi-15.dgimali.org:27017,vm-bd-dgi-16.dgimali.org:27017"
 cache_timer_short_hr: 1
 cache_timer_medium_hr: 24
 cache_timer_long_hr: 100
@@ -69,13 +69,11 @@ seed_tax_system_username: "{{ vault_seed_tax_system_username }}"
 seed_tax_system_password: "{{ vault_seed_tax_system_password }}"
 seed_tax_system_email: efi4MaliTaxSystem@sogematech.com
 
-
-oracle_host: 10.30.152.13
+oracle_host: vm-bd-dgi-03.dgimali.org
 oracle_port: 1521
 oracle_user: "{{ vault_oracle_user }}"
 oracle_pwd: "{{ vault_oracle_pwd }}"
 oracle_db: sgt30uat
-
 
 java_oracle_prefix: jdk
 flyway_root: /opt/flyway

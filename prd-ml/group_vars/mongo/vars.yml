@@ -1,5 +1,5 @@
 ---
-timezone: Africa/Timbuktu
+timezone: Africa/Bamako
 
 dns_resolv_searchpath:
   - 'dgimali.org'
@@ -14,10 +14,9 @@ dd_installed: True
 mongodb_package: mongodb-org
 mongodb_version: "3.4"
 
-mongodb_apt_keyserver: "hkp://keyserver.ubuntu.com:80"
-
-mongodb_apt_key_id:
-  "3.4": "2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5"
+#mongodb_apt_keyserver: "hkp://keyserver.ubuntu.com:80"
+#mongodb_apt_key_id:
+#  "3.4": "2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5"
 
 mongodb_user_update_password: "on_create" # MongoDB user password update default policy
 mongodb_manage_service: true
@@ -73,7 +72,3 @@ mongodb_logrotate_options:
   - dateext
   - rotate 7
   - size 10M
-
-
-
-

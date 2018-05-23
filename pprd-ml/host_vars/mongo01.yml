@@ -1,3 +1,8 @@
 ---
 
 full_hostname: vm-bd-dgi-11.dgimali.org
+
+# It's a 'master' node
+mongodb_login_host: "{{ full_hostname }}"
+
+mongodb_master: True

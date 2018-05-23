@@ -2,15 +2,15 @@
 
 full_hostname: vm-ap-dgi-23.dgimali.org
 
+is_dss_present: False
+
 available_docker_services:
-  - dss
-  - postgres
+  - efiling_ui 
+  - efiling_ui_admin
+  - efiling_api
   - datadog
-
+  
 datadog_monitored_docker_services: 
-  - dss
-  - postgres
-
-first_install: True
-is_dss_present: True
-is_flyway_installed: True  
+  - efiling_ui 
+  - efiling_ui_admin
+  - efiling_api

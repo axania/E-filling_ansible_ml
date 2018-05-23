@@ -1,18 +1,16 @@
 ---
 
-full_hostname: vm-ap-dgi-22.dgimali.org
+full_hostname: vm-ap-dgi-26.dgimali.org
 
 is_dss_present: False
 
 available_docker_services:
   - efiling_ui 
   - efiling_ui_admin
-  - efiling_api 
-  - efiling_cache
+  - efiling_api
   - datadog
-  
+
 datadog_monitored_docker_services: 
   - efiling_ui 
   - efiling_ui_admin
-  - efiling_api 
-  - efiling_cache
+  - efiling_api

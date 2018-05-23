@@ -2,13 +2,28 @@
 # Please note that the load balancer is deployed by the client
 
 worker01 ansible_ssh_host=vm-ap-dgi-21.dgimali.org
-mongo01 ansible_ssh_host=vm-bd-dgi-11.dgimali.org
+worker02 ansible_ssh_host=vm-ap-dgi-26.dgimali.org
+worker03 ansible_ssh_host=vm-ap-dgi-27.dgimali.org
 
-[mongo]
-mongo01
+mongo01 ansible_ssh_host=vm-bd-dgi-11.dgimali.org
+mongo02 ansible_ssh_host=vm-bd-dgi-15.dgimali.org
+mongo03 ansible_ssh_host=vm-bd-dgi-16.dgimali.org
+
+[mongo_master]
+mongo01 mongodb_master=True
+
+[mongo_replicas]
+mongo02
+mongo03
+
+[mongo:children]
+mongo_master
+mongo_replicas
 
 [docker]
 worker01
+worker02
+worker03
 
 [datacenter:children]
 docker

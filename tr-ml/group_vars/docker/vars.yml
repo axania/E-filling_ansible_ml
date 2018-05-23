@@ -4,9 +4,9 @@ dd_enabled: no
 dd_installed: True
 
 docker_compose_version: 1.15.0
-docker_ce_version: 17.09.0~ce-0~ubuntu
+docker_ce_version: 17.12.1-ce-0~ubuntu
 
-timezone: Africa/Timbuktu
+timezone: Africa/Bamako
 
 dns_resolv_searchpath:
   - 'dgimali.org'
@@ -39,8 +39,8 @@ jenkins_slave_node: False
 is_dss_present: True # DSS not being installed in the Same cluster per default
 is_flyway_installed: True
 
-public_ui_url: http://vm-ap-dgi-20.dgimali.org:4200/
-admin_ui_url: http://vm-ap-dgi-20.dgimali.org:4202/
+public_ui_url: http://e-sigtas-for.dgi.gouv.ml:443/
+admin_ui_url: http://e-sigtas-for.dgi.gouv.ml:4202/
 
 sigtas_api_url: 'http://vm-ap-dgi-20.dgimali.org:9767/'
 sigtas_api_services_path: 'services/sigtas/'
@@ -78,7 +78,6 @@ oracle_user: sigtas_api
 oracle_pwd: dbaadmin
 oracle_db: sgt30for
 
-#Flyway WSO2 Postgres variables
 java_oracle_prefix: jdk
 flyway_root: /opt/flyway
 flyway_config:
