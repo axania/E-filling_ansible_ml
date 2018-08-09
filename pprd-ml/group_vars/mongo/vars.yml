@@ -10,7 +10,7 @@ dns_server_list:
   - 8.8.8.8
 
 dd_enabled: no
-dd_installed: True
+dd_installed: False
 
 mongodb_package: mongodb-org
 mongodb_version: "3.4"
