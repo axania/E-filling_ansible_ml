@@ -1,7 +1,7 @@
 ---
 
 dd_enabled: no
-dd_installed: True
+dd_installed: False
 
 #Docker Installed version
 docker_compose_version: 1.21.2
