@@ -11,7 +11,6 @@ available_docker_services:
   - efiling_ui_admin
   - efiling_api 
   - efiling_cache
-  - datadog
   - postgres
   - dss
 
