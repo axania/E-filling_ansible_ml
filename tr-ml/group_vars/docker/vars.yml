@@ -1,10 +1,11 @@
 ---
 
 dd_enabled: no
-dd_installed: True
+dd_installed: False
 
-docker_compose_version: 1.15.0
-docker_ce_version: 17.12.1-ce-0~ubuntu
+#Docker Installed version
+docker_compose_version: 1.21.2
+docker_ce_version: 18.03.1~ce-0~ubuntu
 
 timezone: Africa/Bamako
 
@@ -14,22 +15,21 @@ dns_resolv_searchpath:
 dns_server_list:
   - 10.30.1.48
   - 8.8.8.8
-
+  
 docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
 
 pull_images: no
 
-efiling_ui_image_version: 1.7.1
-efiling_api_image_version: 1.7.1
-dss_sigtas_api_image_version: 0.7.8
+efiling_ui_image_version: 1.9.0
+efiling_api_image_version: 1.9.0
+dss_sigtas_api_image_version: 0.9.0
 
 port: 8080
 node_env: production
 debug: 'true'
 logging_level: info
 
-es_fluentd_enabled: False #elastic search with fluentd
 is_datadog_on_docker: True
 is_tax_calculator_enabled: False
 is_mongo_on_docker_enabled: False 
