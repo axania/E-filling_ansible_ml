@@ -30,7 +30,7 @@ node_env: production
 debug: 'true'
 logging_level: info
 
-is_datadog_on_docker: True
+is_datadog_on_docker: False
 is_tax_calculator_enabled: False
 is_mongo_on_docker_enabled: False 
 node_installed: False
@@ -56,9 +56,9 @@ calculation_api_secured: 'false'
 cache_url: localhost:6379
 
 database_url: "vm-bd-dgi-10.dgimali.org:27017"
-cache_timer_short_hr: 1
-cache_timer_medium_hr: 24
-cache_timer_long_hr: 100
+cache_timer_short_hr: 0
+cache_timer_medium_hr: 0
+cache_timer_long_hr: 0
 
 db_user: "{{ vault_db_user }}"
 db_pass: "{{ vault_db_pass }}"
