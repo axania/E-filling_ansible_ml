@@ -39,8 +39,8 @@ jenkins_slave_node: False
 is_dss_present: True # DSS not being installed in the Same cluster per default
 is_flyway_installed: True
 
-public_ui_url: http://e-sigtas-for.dgi.gouv.ml:443/
-admin_ui_url: http://e-sigtas-for.dgi.gouv.ml:4202/
+public_ui_url: https://e-sigtas-for.dgi.gouv.ml:443/
+admin_ui_url: https://e-sigtas-for.dgi.gouv.ml:4203/
 
 sigtas_api_url: 'http://vm-ap-dgi-20.dgimali.org:9767/'
 sigtas_api_services_path: 'services/sigtas/'
