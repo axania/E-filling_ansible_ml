@@ -6,7 +6,7 @@ dd_installed: True
 docker_compose_version: 1.15.0
 docker_ce_version: 17.09.0~ce-0~ubuntu
 
-timezone: Africa/Timbuktu
+timezone: Africa/Bamako
 
 dns_resolv_searchpath:
   - 'az.sogema.local'

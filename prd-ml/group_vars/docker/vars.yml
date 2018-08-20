@@ -1,10 +1,11 @@
 ---
 
 dd_enabled: no
-dd_installed: True
+dd_installed: False
 
-docker_compose_version: 1.15.0
-docker_ce_version: 17.09.0~ce-0~ubuntu
+#Docker Installed version
+docker_compose_version: 1.21.2
+docker_ce_version: 18.03.1~ce-0~ubuntu
 
 timezone: Africa/Bamako
 
@@ -18,23 +19,25 @@ dns_server_list:
 docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
 
+#Feature Flags - Enable/Disable
+is_datadog_on_docker: False
+is_tax_calculator_enabled: False
+is_mongo_on_docker_enabled: False 
+node_installed: False
+jenkins_slave_node: False
 pull_images: no
 
-efiling_ui_image_version: 1.7.2
-efiling_api_image_version: 1.7.2
-dss_sigtas_api_image_version: 0.7.9
+#Docker Containers Deployed
+efiling_ui_image_version: 1.9.0
+efiling_api_image_version: 1.9.0
+dss_sigtas_api_image_version: 0.9.0
+
+#update_cart_schedule: "0 1 * * *"
 
 port: 8080
 node_env: production
 debug: 'true'
 logging_level: info
-
-es_fluentd_enabled: False #elastic search with fluentd
-is_datadog_on_docker: True
-is_tax_calculator_enabled: False
-is_mongo_on_docker_enabled: False 
-node_installed: False
-jenkins_slave_node: False
 
 public_ui_url: https://e-impot.dgi.gouv.ml:443/
 admin_ui_url: https://e-impot.dgi.gouv.ml:4203/
@@ -53,6 +56,7 @@ calculation_api_secured: 'false'
 cache_url: localhost:6379
 
 database_url: "vm-bd-dgi-12.dgimali.org:27017,vm-bd-dgi-13.dgimali.org:27017,vm-bd-dgi-14.dgimali.org:27017"
+
 cache_timer_short_hr: 1
 cache_timer_medium_hr: 24
 cache_timer_long_hr: 100
@@ -86,4 +90,4 @@ flyway_config:
    user: postgres
    password: postgres
  schemas: public
-flyway_locations: filesystem:/opt/migrations/    
+flyway_locations: filesystem:/opt/migrations/   

@@ -8,7 +8,6 @@ available_docker_services:
   - efiling_ui 
   - efiling_ui_admin
   - efiling_api
-  - datadog
   
 datadog_monitored_docker_services: 
   - efiling_ui 

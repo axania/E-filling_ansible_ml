@@ -1,4 +1,5 @@
 ---
+
 timezone: Africa/Bamako
 
 dns_resolv_searchpath:
@@ -8,15 +9,15 @@ dns_server_list:
   - 10.30.1.48
   - 8.8.8.8
 
-dd_enabled: yes
-dd_installed: True
+dd_enabled: no
+dd_installed: False
 
 mongodb_package: mongodb-org
 mongodb_version: "3.4"
 
-#mongodb_apt_keyserver: "hkp://keyserver.ubuntu.com:80"
-#mongodb_apt_key_id:
-#  "3.4": "2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5"
+mongodb_apt_keyserver: "hkp://keyserver.ubuntu.com:80"
+mongodb_apt_key_id:
+  "3.4": "2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5"
 
 mongodb_user_update_password: "on_create" # MongoDB user password update default policy
 mongodb_manage_service: true
@@ -45,9 +46,6 @@ mongodb_net_http_enabled: false      # Enable http interface
 mongodb_net_ipv6: false             # Enable IPv6 support (disabled by default)
 mongodb_net_maxconns: 51100         # Max number of simultaneous connections
 mongodb_net_port: 27017   
-
-mongodb_daemon_name: "{{ 'mongod' if ('mongodb-org' in mongodb_package) else 'mongodb' }}"
-mongodb_storage_engine: 'wiredTiger'
 
 #Replication
 mongodb_replication_replset: efi4ReplSet

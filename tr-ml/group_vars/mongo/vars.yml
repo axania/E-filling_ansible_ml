@@ -1,15 +1,6 @@
 ---
 
-timezone: Africa/Timbuktu
-
-dd_enabled: yes
-dd_installed: True
-
-mongodb_package: mongodb-org
-mongodb_version: "3.4"
-
-mongodb_user_update_password: "on_create" # MongoDB user password update default policy
-mongodb_manage_service: true
+timezone: Africa/Bamako
 
 dns_resolv_searchpath:
   - 'dgimali.org'
@@ -17,6 +8,15 @@ dns_resolv_searchpath:
 dns_server_list:
   - 10.30.1.48
   - 8.8.8.8
+
+dd_enabled: no
+dd_installed: False
+
+mongodb_package: mongodb-org
+mongodb_version: "3.4"
+
+mongodb_user_update_password: "on_create" # MongoDB user password update default policy
+mongodb_manage_service: true
 
 #Users/Credentials
 mongodb_user_admin_name: "{{vault_mongodb_user_admin_name}}"
@@ -43,6 +43,9 @@ mongodb_net_port: 27017
 mongodb_daemon_name: "{{ 'mongod' if ('mongodb-org' in mongodb_package) else 'mongodb' }}"
 mongodb_storage_engine: 'wiredTiger'
 
+#Logging
+mongodb_logrotate: true
+
 ## systemLog Options
 ## The destination to which MongoDB sends all log output. Specify either 'file' or 'syslog'.
 ## If you specify 'file', you must also specify mongodb_systemlog_path.
@@ -59,7 +62,3 @@ mongodb_logrotate_options:
   - dateext
   - rotate 7
   - size 10M
-
-
-
-

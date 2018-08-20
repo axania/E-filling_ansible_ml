@@ -10,6 +10,6 @@ datadog_monitored_docker_services:
   - dss
   - postgres
 
-first_install: False
+first_install: True
 is_dss_present: True
 is_flyway_installed: True  

@@ -1,4 +1,6 @@
 # This is the training env for Mali
+# Please note that the load balancer is deployed by the client
+
 worker01 ansible_ssh_host=vm-ap-dgi-20.dgimali.org
 mongo01 ansible_ssh_host=vm-bd-dgi-10.dgimali.org
 
