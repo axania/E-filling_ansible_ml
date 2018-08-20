@@ -22,6 +22,9 @@ mongodb_user_update_password: "on_create" # MongoDB user password update default
 mongodb_manage_service: true
 
 #Users/Credentials
+mongodb_datadog_user_admin_name: "{{vault_mongodb_datadog_name}}"
+mongodb_datadog_password: "{{vault_mongodb_datadog_password}}"
+
 mongodb_user_admin_name: "{{vault_mongodb_user_admin_name}}"
 mongodb_user_admin_password: "{{vault_mongodb_user_admin_password}}"
 
