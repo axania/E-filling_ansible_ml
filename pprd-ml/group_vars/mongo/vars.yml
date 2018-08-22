@@ -40,6 +40,8 @@ mongodb_keyfile_content: "{{ vault_mongodb_keyfile_content }}"
 
 mongodb_users: "{{ vault_efiling_user }}"
 
+mongodb_datadog_password: "{{vault_mongodb_datadog_password}}"
+
 ## net Options
 mongodb_net_bindip: 0.0.0.0     # Comma separated list of ip addresses to listen on
 mongodb_net_http_enabled: false      # Enable http interface

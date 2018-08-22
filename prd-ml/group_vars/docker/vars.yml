@@ -19,6 +19,9 @@ dns_server_list:
 docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
 
+#MALI OWN DATADOG ACCOUNT
+dd_key: "{{ vault_dd_key }}"
+
 #Feature Flags - Enable/Disable
 is_datadog_on_docker: False
 is_tax_calculator_enabled: False
