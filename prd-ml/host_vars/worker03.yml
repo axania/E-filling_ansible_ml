@@ -5,6 +5,7 @@ full_hostname: vm-ap-dgi-24.dgimali.org
 available_docker_services:
   - dss
   - postgres
+  - datadog
 
 datadog_monitored_docker_services: 
   - dss

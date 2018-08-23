@@ -23,7 +23,7 @@ docker_pwd: "{{ vault_docker_pwd }}"
 dd_key: "{{ vault_dd_key }}"
 
 #Feature Flags - Enable/Disable
-is_datadog_on_docker: False
+is_datadog_on_docker: True
 is_tax_calculator_enabled: False
 is_mongo_on_docker_enabled: False 
 node_installed: False
@@ -36,6 +36,12 @@ efiling_api_image_version: 1.9.0
 dss_sigtas_api_image_version: 0.9.0
 
 #update_cart_schedule: "0 1 * * *"
+
+#2FA disabled for now
+twofactor_public: 'false'
+twofactor_private: 'false'
+twofactor_passcode_expire: 15 #in minutes
+
 
 port: 8080
 node_env: production
