@@ -6,19 +6,9 @@ worker02 ansible_ssh_host=vm-ap-dgi-26.dgimali.org
 worker03 ansible_ssh_host=vm-ap-dgi-27.dgimali.org
 
 mongo01 ansible_ssh_host=vm-bd-dgi-11.dgimali.org
-mongo02 ansible_ssh_host=vm-bd-dgi-15.dgimali.org
-mongo03 ansible_ssh_host=vm-bd-dgi-16.dgimali.org
 
-[mongo_master]
-mongo01 mongodb_master=True
-
-[mongo_replicas]
-mongo02
-mongo03
-
-[mongo:children]
-mongo_master
-mongo_replicas
+[mongo]
+mongo01
 
 [docker]
 worker01
