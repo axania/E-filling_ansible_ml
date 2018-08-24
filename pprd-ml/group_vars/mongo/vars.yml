@@ -2,6 +2,9 @@
 
 timezone: Africa/Bamako
 
+#MALI OWN DATADOG ACCOUNT
+dd_key: "{{ vault_dd_key }}"
+
 dns_resolv_searchpath:
   - 'dgimali.org'
 
