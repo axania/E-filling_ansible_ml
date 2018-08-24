@@ -59,7 +59,7 @@ calculation_api_secured: 'false'
 
 cache_url: localhost:6379
 
-database_url: "vm-bd-dgi-11.dgimali.org:27017,vm-bd-dgi-15.dgimali.org:27017,vm-bd-dgi-16.dgimali.org:27017"
+database_url: "vm-bd-dgi-11.dgimali.org:27017"
 cache_timer_short_hr: 1
 cache_timer_medium_hr: 24
 cache_timer_long_hr: 100
