@@ -49,16 +49,6 @@ mongodb_net_ipv6: false             # Enable IPv6 support (disabled by default)
 mongodb_net_maxconns: 51100         # Max number of simultaneous connections
 mongodb_net_port: 27017   
 
-#Replication
-mongodb_replication_replset: efi4ReplSet
-mongodb_replication_oplogsize: 1024
-
-# mongodb_replication_params should be configured on each replica set node
-mongodb_replication_params:
-  - { host_name: "vm-bd-dgi-11.dgimali.org", host_port: "{{ mongodb_net_port }}", host_type: 'replica' }
-  - { host_name: "vm-bd-dgi-15.dgimali.org", host_port: "{{ mongodb_net_port }}", host_type: 'replica' }
-  - { host_name: "vm-bd-dgi-16.dgimali.org", host_port: "{{ mongodb_net_port }}", host_type: 'replica' }
-
 ## systemLog Options
 ## The destination to which MongoDB sends all log output. Specify either 'file' or 'syslog'.
 ## If you specify 'file', you must also specify mongodb_systemlog_path.
