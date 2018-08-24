@@ -12,8 +12,6 @@ timezone: Africa/Bamako
 #MALI OWN DATADOG ACCOUNT
 dd_key: "{{ vault_dd_key }}"
 
-
-
 dns_resolv_searchpath:
   - 'dgimali.org'
 
@@ -28,6 +26,8 @@ docker_pwd: "{{ vault_docker_pwd }}"
 is_datadog_on_docker: False
 is_tax_calculator_enabled: False
 is_mongo_on_docker_enabled: False 
+is_swarm_mode_enabled: True # Swarm Mode Enabled
+
 node_installed: False
 jenkins_slave_node: False
 pull_images: no
@@ -38,6 +38,11 @@ efiling_api_image_version: 1.9.0
 dss_sigtas_api_image_version: 0.9.0
 
 #update_cart_schedule: "0 1 * * *"
+
+#2FA disabled for now only compatibel with 1.9.1 onwards
+twofactor_public: 'false'
+twofactor_private: 'false'
+twofactor_passcode_expire: 15 #in minutes
 
 port: 8080
 node_env: production

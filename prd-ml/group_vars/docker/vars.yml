@@ -26,6 +26,8 @@ dd_key: "{{ vault_dd_key }}"
 is_datadog_on_docker: True
 is_tax_calculator_enabled: False
 is_mongo_on_docker_enabled: False 
+is_swarm_mode_enabled: True # Swarm Mode Enabled
+
 node_installed: False
 jenkins_slave_node: False
 pull_images: no
