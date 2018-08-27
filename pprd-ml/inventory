@@ -1,9 +1,9 @@
-# This is the pre-production environment for Mali
+# This is the pre-production environment for Mali hosted on their own infrastructure
 # Please note that the load balancer is deployed by the client
 
-worker01 ansible_ssh_host=vm-ap-dgi-21.dgimali.org
-worker02 ansible_ssh_host=vm-ap-dgi-26.dgimali.org
-worker03 ansible_ssh_host=vm-ap-dgi-27.dgimali.org
+vm-ap-dgi-21 ansible_ssh_host=vm-ap-dgi-21.dgimali.org
+vm-ap-dgi-26 ansible_ssh_host=vm-ap-dgi-26.dgimali.org
+vm-ap-dgi-27 ansible_ssh_host=vm-ap-dgi-27.dgimali.org
 
 mongo01 ansible_ssh_host=vm-bd-dgi-11.dgimali.org
 
@@ -11,12 +11,27 @@ mongo01 ansible_ssh_host=vm-bd-dgi-11.dgimali.org
 mongo01
 
 [docker]
-worker01
-worker02
-worker03
+vm-ap-dgi-21
+vm-ap-dgi-26
+vm-ap-dgi-27
+
+[docker_engine]
+vm-ap-dgi-21
+vm-ap-dgi-26
+vm-ap-dgi-27
+
+[docker_swarm_manager]
+vm-ap-dgi-21
+
+[docker_swarm_worker]
+vm-ap-dgi-26
+vm-ap-dgi-27
 
 [datacenter:children]
 docker
+docker_engine
+docker_swarm_manager
+docker_swarm_worker
 mongo
 
 [datacenter:vars]

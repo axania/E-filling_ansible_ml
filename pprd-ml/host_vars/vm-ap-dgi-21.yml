@@ -1,0 +1,7 @@
+---
+
+full_hostname: vm-ap-dgi-21.dgimali.org
+
+jenkins_slave_node: True #This host works as a jenkins slave too
+
+swarm_node_role: efiling
