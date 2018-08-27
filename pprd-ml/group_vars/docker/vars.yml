@@ -23,8 +23,7 @@ dd_key: "{{ vault_dd_key }}"
 #Feature Flags
 dd_enabled: no #We're using datadog in docker now. This var comes from datadog role.
 dd_installed: False #We keep it installed in the VM though.
-es_fluentd_enabled: False #elastic search with fluentd enabled
-is_mongo_on_docker_enabled: False # we using dedicated on OS installed instances here.
+is_mongo_on_docker_enabled: True # we using dedicated on OS installed instances here.
 is_swarm_mode_enabled: True # Swarm Mode Enabled
 is_tax_calculator_enabled: False
 is_datadog_on_docker: True
@@ -35,26 +34,7 @@ is_dss_present: True
 skip_engine: True
 skip_docker_py: True
 
-available_docker_services:
-  - efiling_ui 
-  - efiling_ui_admin
-  - efiling_api 
-  - efiling_cache
-  - efiling_db
-  - dss
-  - tax_calculator
-  - keycloak
-  - datadog
 
-datadog_monitored_docker_services: 
-  - efiling_ui 
-  - efiling_ui_admin
-  - efiling_api 
-  - efiling_db
-  - keycloak
-  - dss
-  - tax_calculator
-  - efiling_cache
 node_installed: False
 jenkins_slave_node: False
 pull_images: no
@@ -91,10 +71,10 @@ calculation_api_secured: 'false'
 
 cache_url: localhost:6379
 
-database_url: "vm-bd-dgi-11.dgimali.org:27017"
-cache_timer_short_hr: 1
-cache_timer_medium_hr: 24
-cache_timer_long_hr: 100
+database_url: "efiling_db:27017"
+cache_timer_short_hr: 0
+cache_timer_medium_hr: 0
+cache_timer_long_hr: 0
 
 db_user: "{{ vault_db_user }}"
 db_pass: "{{ vault_db_pass }}"
