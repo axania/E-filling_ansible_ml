@@ -1,9 +1,9 @@
 # This is the production environment for Mali
 # Please note that the load balancer is deployed by the client
 
-worker01 ansible_ssh_host=vm-ap-dgi-22.dgimali.org
-worker02 ansible_ssh_host=vm-ap-dgi-23.dgimali.org
-worker03 ansible_ssh_host=vm-ap-dgi-24.dgimali.org
+vm-ap-dgi-22 ansible_ssh_host=vm-ap-dgi-22.dgimali.org
+vm-ap-dgi-23 ansible_ssh_host=vm-ap-dgi-23.dgimali.org
+vm-ap-dgi-24 ansible_ssh_host=vm-ap-dgi-24.dgimali.org
 
 mongo01 ansible_ssh_host=vm-bd-dgi-12.dgimali.org
 mongo02 ansible_ssh_host=vm-bd-dgi-13.dgimali.org
@@ -21,12 +21,22 @@ mongo_master
 mongo_replicas
 
 [docker]
-worker01
-worker02
-worker03
+vm-ap-dgi-22
+vm-ap-dgi-23
+vm-ap-dgi-24
+
+[docker_swarm_manager]
+vm-ap-dgi-22
+
+[docker_swarm_worker]
+vm-ap-dgi-23
+vm-ap-dgi-24
 
 [datacenter:children]
 docker
+docker_engine
+docker_swarm_manager
+docker_swarm_worker
 mongo
 
 [datacenter:vars]
