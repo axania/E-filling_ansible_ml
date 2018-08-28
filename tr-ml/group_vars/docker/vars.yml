@@ -1,5 +1,4 @@
 ---
-
 dd_enabled: no
 dd_installed: False
 
@@ -21,14 +20,19 @@ docker_pwd: "{{ vault_docker_pwd }}"
 
 pull_images: no
 
-efiling_ui_image_version: 1.9.0
-efiling_api_image_version: 1.9.0
+efiling_ui_image_version: 1.9.1
+efiling_api_image_version: 1.9.1
 dss_sigtas_api_image_version: 0.9.0
 
 port: 8080
 node_env: production
 debug: 'true'
 logging_level: info
+
+#2FA disabled for now only compatibel with 1.9.1 onwards
+twofactor_public: 'true'
+twofactor_private: 'true'
+twofactor_passcode_expire: 15 #in minutes
 
 is_datadog_on_docker: False
 is_tax_calculator_enabled: False
