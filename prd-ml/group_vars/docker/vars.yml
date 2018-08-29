@@ -49,7 +49,7 @@ dss_sigtas_api_image_version: 0.9.0
 
 #2FA disabled for now
 twofactor_public: 'true'
-twofactor_private: 'true'
+twofactor_private: 'false'
 twofactor_passcode_expire: 15 #in minutes
 
 

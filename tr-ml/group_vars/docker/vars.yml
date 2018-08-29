@@ -31,7 +31,7 @@ logging_level: info
 
 #2FA disabled for now only compatibel with 1.9.1 onwards
 twofactor_public: 'true'
-twofactor_private: 'true'
+twofactor_private: 'false'
 twofactor_passcode_expire: 15 #in minutes
 
 is_datadog_on_docker: False
