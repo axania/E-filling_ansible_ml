@@ -77,8 +77,8 @@ cache_url: localhost:6379
 database_url: "vm-bd-dgi-12.dgimali.org:27017,vm-bd-dgi-13.dgimali.org:27017,vm-bd-dgi-14.dgimali.org:27017"
 
 cache_timer_short_hr: 1
-cache_timer_medium_hr: 24
-cache_timer_long_hr: 100
+cache_timer_medium_hr: 2
+cache_timer_long_hr: 3
 
 db_user: "{{ vault_db_user }}"
 db_pass: "{{ vault_db_pass }}"
