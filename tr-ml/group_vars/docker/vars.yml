@@ -34,7 +34,7 @@ twofactor_public: 'true'
 twofactor_private: 'false'
 twofactor_passcode_expire: 15 #in minutes
 
-is_datadog_on_docker: False
+is_datadog_on_docker: True
 is_tax_calculator_enabled: False
 is_mongo_on_docker_enabled: False 
 node_installed: False
@@ -43,8 +43,8 @@ jenkins_slave_node: False
 is_dss_present: True # DSS not being installed in the Same cluster per default
 is_flyway_installed: True
 
-public_ui_url: https://e-sigtas-for.dgi.gouv.ml:443/
-admin_ui_url: https://e-sigtas-for.dgi.gouv.ml:4203/
+public_ui_url: https://e-impot-for.dgi.gouv.ml:443/
+admin_ui_url: https://e-impot-for.dgi.gouv.ml:4203/
 
 sigtas_api_url: 'http://vm-ap-dgi-20.dgimali.org:9767/'
 sigtas_api_services_path: 'services/sigtas/'
