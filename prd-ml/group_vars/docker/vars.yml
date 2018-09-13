@@ -97,6 +97,7 @@ oracle_port: 1521
 oracle_user: "{{ vault_oracle_user }}"
 oracle_pwd: "{{ vault_oracle_pwd }}"
 oracle_db: sgt30prd
+wso2_logging_level: INFO
 
 java_oracle_prefix: jdk
 flyway_root: /opt/flyway
