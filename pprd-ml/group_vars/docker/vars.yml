@@ -27,7 +27,6 @@ is_mongo_on_docker_enabled: True # we using dedicated on OS installed instances 
 is_swarm_mode_enabled: True # Swarm Mode Enabled
 is_tax_calculator_enabled: False
 is_datadog_on_docker: True
-is_keycloak_enabled: False
 is_dss_present: True
 
 #attossato docker-swarm role settings
@@ -40,9 +39,18 @@ jenkins_slave_node: False
 pull_images: no
 
 #Docker Containers Deployed
-efiling_ui_image_version: 1.9.1
-efiling_api_image_version: 1.9.1
-dss_sigtas_api_image_version: 0.9.0
+efiling_ui_image_version: 1.10.0
+efiling_api_image_version: 1.10.0
+dss_sigtas_api_image_version: 0.9.1
+
+#Login brute force protection
+slow_seconds: 1
+login_lock: 'true'
+lock_minutes: 1
+login_captcha: 'true'
+captcha_minutes: 20
+max_failed_attempts: 5
+
 
 #update_cart_schedule: "0 1 * * *"
 

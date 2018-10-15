@@ -27,7 +27,6 @@ is_mongo_on_docker_enabled: False # we using dedicated on OS installed instances
 is_swarm_mode_enabled: True # Swarm Mode Enabled
 is_tax_calculator_enabled: False
 is_datadog_on_docker: True
-is_keycloak_enabled: False
 is_dss_present: True
 
 node_installed: False
