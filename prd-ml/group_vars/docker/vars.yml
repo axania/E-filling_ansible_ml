@@ -52,6 +52,17 @@ twofactor_private: 'false'
 twofactor_passcode_expire: 15 #in minutes
 
 
+#Login brute force protection
+slow_seconds: 1
+login_lock: 'true'
+lock_minutes: 1
+login_captcha: 'true'
+captcha_minutes: 20
+max_failed_attempts: 5
+
+max_file_size: 10000000 # in bytes 10mb
+
+
 port: 8080
 node_env: production
 debug: 'true'
