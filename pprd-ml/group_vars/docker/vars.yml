@@ -39,8 +39,8 @@ jenkins_slave_node: False
 pull_images: no
 
 #Docker Containers Deployed
-efiling_ui_image_version: 1.10.0
-efiling_api_image_version: 1.10.0
+efiling_ui_image_version: 1.10.1
+efiling_api_image_version: 1.10.1
 dss_sigtas_api_image_version: 0.9.1
 
 #Login brute force protection
@@ -51,6 +51,7 @@ login_captcha: 'true'
 captcha_minutes: 20
 max_failed_attempts: 5
 
+max_file_size: 10000000 # in bytes 10mb
 
 #update_cart_schedule: "0 1 * * *"
 
