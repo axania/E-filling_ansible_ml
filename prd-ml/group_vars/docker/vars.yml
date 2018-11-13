@@ -40,8 +40,8 @@ skip_docker_py: True
 
 
 #Docker Containers Deployed
-efiling_ui_image_version: 1.9.1
-efiling_api_image_version: 1.9.1
+efiling_ui_image_version: 1.10.1
+efiling_api_image_version: 1.10.1
 dss_sigtas_api_image_version: 0.9.0
 
 #update_cart_schedule: "0 1 * * *"
