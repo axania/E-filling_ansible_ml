@@ -10,6 +10,7 @@ dns_resolv_searchpath:
 
 dns_server_list:
   - 10.30.1.48
+  - 10.30.1.49  
   - 8.8.8.8
 
 dd_enabled: no
