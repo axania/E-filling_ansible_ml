@@ -50,9 +50,9 @@ wso2_logging_level: INFO
 is_filebeat_on_docker: False
 
 #Docker Containers Deployed
-efiling_ui_image_version: 1.14.3
-efiling_api_image_version: 1.14.3
-dss_sigtas_api_image_version: 0.9.12
+efiling_ui_image_version: 1.14.5
+efiling_api_image_version: 1.14.5
+dss_sigtas_api_image_version: 0.9.14
 
 #Login brute force protection
 slow_seconds: 1
