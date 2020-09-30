@@ -1,0 +1,8 @@
+---
+
+full_hostname: vm-ap-dgi-27.dgimali.org 
+
+swarm_node_role: sigtas_api
+#first_install: True
+#is_flyway_installed: True
+

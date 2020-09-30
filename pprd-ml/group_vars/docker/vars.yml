@@ -2,47 +2,57 @@
 
 #Docker Installed version
 docker_compose_version: 1.21.2
-docker_ce_version: 18.06.0~ce~3-0~ubuntu
+docker_ce_version: 18.03.1~ce-0~ubuntu
 
-timezone: Africa/Bamako
+is_swarm_mode_enabled: True
+#For the atosatto.docker-swarm role
+#These are needed when configuring the environment in Swarm mode
+docker_group_users:
+  - docker
+  - "{{ vault_ansible_ssh_user }}"
+skip_engine: True
+skip_cli: True
+skip_docker_py: True
+skip_docker_compose: True
+skip_containerd: True
+skip_repo: True
+skip_swarm: False
+skip_group: False
 
-dns_resolv_searchpath:
-  - 'dgimali.org'
-
-dns_server_list:
-  - 10.30.1.48
-  - 10.30.1.49
-  - 8.8.8.8
-  
+docker_registry: "{{ vault_docker_registry }}"
 docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
+docker_email: "jenkins@sti.systems"
 
 #MALI OWN DATADOG ACCOUNT
 dd_key: "{{ vault_dd_key }}"
 
-
 #Feature Flags
 dd_enabled: no #We're using datadog in docker now. This var comes from datadog role.
 dd_installed: False #We keep it installed in the VM though.
-is_mongo_on_docker_enabled: True # we using dedicated on OS installed instances here.
-is_swarm_mode_enabled: True # Swarm Mode Enabled
+is_mongo_on_docker_enabled: False # we using dedicated on OS installed instances here.
 is_tax_calculator_enabled: False
 is_datadog_on_docker: True
 is_dss_present: True
+is_api_scheduler_enabled: True
+#Payment processing update cart interval - UBA specific
+update_cart_schedule: "0 1 * * *"
 
-#attossato docker-swarm role settings
-skip_engine: True
-skip_docker_py: True
-
+#efiling_api connection retrials mongodb
+db_reconnect_limit: 0
+db_reconnect_interval: 5000
 
 node_installed: False
 jenkins_slave_node: False
-pull_images: no
+pull_images: True
+google_analytics_key: 'UA-64271660-2'
+wso2_logging_level: INFO
+is_filebeat_on_docker: False
 
 #Docker Containers Deployed
-efiling_ui_image_version: 1.12.0
-efiling_api_image_version: 1.11.0
-dss_sigtas_api_image_version: 0.9.1
+efiling_ui_image_version: 1.14.3
+efiling_api_image_version: 1.14.3
+dss_sigtas_api_image_version: 0.9.12
 
 #Login brute force protection
 slow_seconds: 1
@@ -65,8 +75,10 @@ port: 8080
 node_env: production
 debug: 'true'
 logging_level: info
-public_ui_url: https://e-impot-prp.dgi.gouv.ml:443/
-admin_ui_url: https://e-impot-prp.dgi.gouv.ml:4203/
+#public_ui_url: https://e-impot-prp.dgi.gouv.ml:443/
+#admin_ui_url: https://e-impot-prp.dgi.gouv.ml:4203/
+public_ui_url: http://vm-ap-dgi-21.dgimali.org:4200/
+admin_ui_url: http://vm-ap-dgi-21.dgimali.org:4202/
 
 sigtas_api_url: 'http://vm-ap-dgi-27.dgimali.org:9767/'
 sigtas_api_services_path: 'services/sigtas/'
@@ -81,7 +93,8 @@ calculation_api_secured: 'false'
 
 cache_url: localhost:6379
 
-database_url: "efiling_db:27017"
+database_url: "vm-bd-dgi-11.dgimali.org:27017"
+#database_url: "vm-ap-dgi-27.dgimali.org:27017"
 cache_timer_short_hr: 0
 cache_timer_medium_hr: 0
 cache_timer_long_hr: 0
@@ -89,6 +102,7 @@ cache_timer_long_hr: 0
 db_user: "{{ vault_db_user }}"
 db_pass: "{{ vault_db_pass }}"
 db_name: efiling
+#db_name: admin
 
 seed_admin_username: "{{ vault_seed_admin_username }}"
 seed_admin_password: "{{ vault_seed_admin_password }}"
@@ -104,7 +118,9 @@ oracle_user: "{{ vault_oracle_user }}"
 oracle_pwd: "{{ vault_oracle_pwd }}"
 oracle_db: sgt30uat
 
+first_install: True
 java_oracle_prefix: jdk
+is_flyway_installed: True
 flyway_root: /opt/flyway
 flyway_config:
  database: 

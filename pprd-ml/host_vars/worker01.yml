@@ -1,0 +1,6 @@
+---
+
+full_hostname: vm-ap-dgi-21.dgimali.org
+swarm_node_role: efiling
+
+#is_flyway_installed: False

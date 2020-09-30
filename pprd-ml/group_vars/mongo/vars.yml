@@ -15,6 +15,7 @@ dns_server_list:
 
 dd_enabled: no
 dd_installed: False
+is_mongodb_prospector_enabled: False
 
 mongodb_package: mongodb-org
 mongodb_version: "3.4"
