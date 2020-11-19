@@ -32,6 +32,9 @@ dd_enabled: no #We're using datadog in docker now. This var comes from datadog r
 dd_installed: False #We keep it installed in the VM though.
 is_mongo_on_docker_enabled: False # we using dedicated on OS installed instances here.
 is_tax_calculator_enabled: False
+## Tax calculation feature (With Sigtas or tax_calculator system) (DDC-28)
+is_tax_calc_feature_enabled: 'true'
+update_taxpayer_access_schedule: '*/3 * * * *'
 is_datadog_on_docker: True
 is_dss_present: True
 is_api_scheduler_enabled: True
@@ -50,9 +53,9 @@ wso2_logging_level: INFO
 is_filebeat_on_docker: False
 
 #Docker Containers Deployed
-efiling_ui_image_version: 1.14.5
-efiling_api_image_version: 1.14.5
-dss_sigtas_api_image_version: 0.9.14
+efiling_ui_image_version: 1.14.7
+efiling_api_image_version: 1.14.7
+dss_sigtas_api_image_version: 0.9.19
 
 #Login brute force protection
 slow_seconds: 1
