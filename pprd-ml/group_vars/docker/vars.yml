@@ -33,7 +33,7 @@ dd_installed: False #We keep it installed in the VM though.
 is_mongo_on_docker_enabled: False # we using dedicated on OS installed instances here.
 is_tax_calculator_enabled: False
 ## Tax calculation feature (With Sigtas or tax_calculator system) (DDC-28)
-is_tax_calc_feature_enabled: 'true'
+is_tax_calc_feature_enabled: 'false'
 update_taxpayer_access_schedule: '*/3 * * * *'
 is_datadog_on_docker: True
 is_dss_present: True
