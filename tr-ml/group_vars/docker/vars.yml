@@ -1,30 +1,52 @@
 ---
-dd_enabled: no
-dd_installed: False
 
 #Docker Installed version
 docker_compose_version: 1.21.2
 docker_ce_version: 18.03.1~ce-0~ubuntu
 
-timezone: Africa/Bamako
-
-dns_resolv_searchpath:
-  - 'dgimali.org'
-
-dns_server_list:
-  - 10.30.1.48
-  - 10.30.1.49
-  - 8.8.8.8
   
 docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
 
-pull_images: no
+#Feature Flags - Enable/Disable
+dd_enabled: no #We're using datadog in docker now. This var comes from datadog role.
+dd_installed: False #We won't keep installed in the VM.
+is_mongo_on_docker_enabled: False # we using dedicated on OS installed instances here.
+is_swarm_mode_enabled: False # Swarm Mode Enabled
+## Tax calculation feature (With Sigtas or tax_calculator system) (DDC-28)
+is_tax_calculator_enabled: False
+is_tax_calc_feature_enabled: 'false'
+update_taxpayer_access_schedule: '*/3 * * * *'
+is_datadog_on_docker: false
+is_dss_present: True
+is_api_scheduler_enabled: True
+#Payment processing update cart interval - UBA specific
+update_cart_schedule: "0 1 * * *"
+
+#efiling_api connection retrials mongodb
+db_reconnect_limit: 0
+db_reconnect_interval: 5000
+
+node_installed: False
+jenkins_slave_node: False
+pull_images: True
+wso2_logging_level: INFO
+is_filebeat_on_docker: False
+
+#attossato docker-swarm role settings
+skip_engine: True
+skip_docker_py: True
 
 #Docker Containers Deployed
-efiling_ui_image_version: 1.12.0
-efiling_api_image_version: 1.11.0
-dss_sigtas_api_image_version: 0.9.1
+efiling_ui_image_version: 1.14.7
+efiling_api_image_version: 1.14.7
+dss_sigtas_api_image_version: 0.9.19
+
+#2FA disabled for now
+twofactor_public: 'true'
+twofactor_private: 'false'
+twofactor_passcode_expire: 15 #in minutes
+
 
 #Login brute force protection
 slow_seconds: 1
@@ -36,26 +58,12 @@ max_failed_attempts: 5
 
 max_file_size: 10000000 # in bytes 10mb
 
-#update_cart_schedule: "0 1 * * *"
 
-#2FA disabled for now only compatible with 1.9.1 onwards
-twofactor_public: 'true'
-twofactor_private: 'false'
-twofactor_passcode_expire: 15 #in minutes
 
 port: 8080
 node_env: production
 debug: 'true'
 logging_level: info
-
-is_datadog_on_docker: True
-is_tax_calculator_enabled: False
-is_mongo_on_docker_enabled: False 
-node_installed: False
-jenkins_slave_node: False
-
-is_dss_present: True # DSS not being installed in the Same cluster per default
-is_flyway_installed: True
 
 public_ui_url: https://e-impot-for.dgi.gouv.ml:443/
 admin_ui_url: https://e-impot-for.dgi.gouv.ml:4203/

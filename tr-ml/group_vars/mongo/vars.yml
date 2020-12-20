@@ -44,8 +44,7 @@ mongodb_net_port: 27017
 mongodb_daemon_name: "{{ 'mongod' if ('mongodb-org' in mongodb_package) else 'mongodb' }}"
 mongodb_storage_engine: 'wiredTiger'
 
-#Logging
-mongodb_logrotate: true
+
 
 ## systemLog Options
 ## The destination to which MongoDB sends all log output. Specify either 'file' or 'syslog'.
